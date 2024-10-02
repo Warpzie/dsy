@@ -1,3 +1,7 @@
 SELECT COUNT(*) FROM osoba WHERE vek = 16;
 SELECT AVG(vek) FROM osoba;
 SELECT SUM(vek) FROM osoba;
+SELECT MIN(vek) FROM osoba;
+SELECT MAX(vek) FROM osoba;
+SELECT meno FROM osoba GROUP BY meno;
+SELECT meno,COUNT(*) FROM osoba GROUP BY meno;
