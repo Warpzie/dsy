@@ -1,0 +1,3 @@
+SELECT COUNT(*) FROM osoba WHERE vek = 16;
+SELECT AVG(vek) FROM osoba;
+SELECT SUM(vek) FROM osoba;
