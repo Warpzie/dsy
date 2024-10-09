@@ -1,0 +1,15 @@
+SELECT * FROM `osoba` WHERE priezvisko LIKE "_u%"; //kde druhy znak = u
+SELECT * FROM `osoba` ORDER BY vek DESC; //zoradenie podla veku
+DELETE FROM osoba WHERE vek IN (28, 24, 29);  // vymaze osoby s danym vekom
+SELECT * FROM `osoba` ORDER BY vek ASC LIMIT 3; //vyberie top 3
+SELECT meno FROM `osoba` GROUP BY meno; // vypise mena len 1x
+SELECT meno,COUNT(*) FROM `osoba` GROUP BY meno; //meno + pocet vyskytov
+SELECT meno,COUNT(*) AS pocet FROM `osoba` GROUP BY meno; // + premenuje stlpec z count(*) na pocet
+SELECT CONCAT(meno, " ", priezvisko) AS cele_meno,vek FROM osoba; // spoji stlpce meno a priezvisko do jedneho stlpca s nazvom cele meno a do vypisu prida vek
+SELECT REPLACE(CONCAT(meno," ",priezvisko),"-"," ") AS cele_meno, vek FROM `osoba`; // spojenie mena a priezviska (janko - hrasko) a nahradenie "-" medzerou
+        cmd            kde                 co   za co
+SELECT MAX(vek) AS vek FROM osoba; // vypise najstarsieho - max vek
+SELECT * FROM osoba WHERE vek=(SELECT MAX(vek) FROM osoba); //max vek
+SELECT REPLACE (meno,"i",1) AS replaced from osoba; // vymeni i za 1
+SELECT SUBSTRING_INDEX(adresa, " ",1) AS ulica,SUBSTRING_INDEX(adresa, " ",-1) AS cislo FROM osoba; //split string , cislo ucuje vzdialenost od znaku podla kt sa rozdeluje
+SELECT vek, COUNT(*) AS pocet_opakovani FROM osoba GROUP BY vek HAVING vek > 16; // pocet opakovani veku vyssieho ako 16
