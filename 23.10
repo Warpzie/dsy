@@ -1,0 +1,31 @@
+CREATE TABLE users (
+    id_user INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    second_name VARCHAR(50),
+    age INT
+);
+CREATE TABLE posts (
+    id_post INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255),
+    content TEXT,
+    id_user_fk INT,
+    FOREIGN KEY (id_user_fk) REFERENCES users(id_user)
+);
+
+INSERT INTO users (first_name, second_name, age)
+VALUES
+    ('Janko', 'Hraško', 15),
+    ('Marienka', 'Kvietková', 12)
+    ...
+;
+ALTER TABLE posts
+ADD CONSTRAINT fk_posts_users
+FOREIGN KEY (id_user_fk)
+REFERENCES users(id_user)
+ON DELETE SET NULL;
+
+ALTER TABLE users
+ADD CONSTRAINT fk_users_posts
+FOREIGN KEY (id_user)
+REFERENCES posts(id_user_fk)
+ON DELETE CASCADE;
