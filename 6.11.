@@ -1,0 +1,11 @@
+CREATE DATABASE film;
+CREATE TABLE film ( id_film INT(10) PRIMARY KEY, nazov VARCHAR(80), dlzka TIME, stat VARCHAR(30), rok INT(10), hodnotenie INT(10), obsah TEXT);
+CREATE TABLE herec (id_herec INT(10) PRIMARY KEY, meno VARCHAR(50), priezvisko VARcHAR(100));
+CREATE TABLE film_herec (id INT(10) PRIMARY KEY, id_film INT(10), id_herec INT(10));
+CREATE TABLE zaner (id_zaner INT(10) PRIMARY KEY, zaner VARCHAR(150));
+CREATE TABLE film_zaner (id INT(10) PRIMARY KEY, id_film INT(10), id_zaner INT(10));
+CREATE TABLE hodnotenie (id_hodnotenie INT(10) PRIMARY KEY, pocet_hviezd INT(6));
+CREATE TABLE reziser (id_reziser INT(10) PRIMARY KEY, meno VARCHAR(50), priezvisko VARCHAR(100));
+CREATE TABLE film_reziser (id INT(10) PRIMARY KEY, id_film INT(10), id_reziser INT(10));
+ALTER TABLE film ADD FOREIGN KEY (hodnotenie) REFERENCES hodnotenie(id_hodnotenie);
+ALTER TABLE film_herec ADD FOREIGN KEY (id_film) REFERENCES film(id_film);
