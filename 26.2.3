@@ -26,6 +26,15 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     <form action="" method = "POST">
     <label for="name">Meno</label>
     <input type="text" name = "name" id="name">
+        <br>
+    <label for="secondName">Priezvisko</label>
+    <input type="text" name = "secondName" id="secondName">
+    <br>
+        <label for="name">Pohlavie</label>
+    <select name="pohlavie" id="pohlavie">
+        <option vlaue= "1">zena</option>
+        <option vlaue= "2">muz</option>
+        <option vlaue= "3">ine</option>
     <br><br>
     <input type="submit" value="odosli">
 </form>
