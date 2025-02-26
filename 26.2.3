@@ -1,0 +1,33 @@
+<?php
+function checkInput($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+
+    return $data;
+}
+if($_SERVER['REQUEST_METHOD']==='POST'){
+    if (isset($_POST['name']) && !empty($_POST['name'])) {
+        $firstName = checkInput($_POST['name']);
+        echo $firstName;
+    }else{
+        echo 'nezadal si meno';
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method = "POST">
+    <label for="name">Meno</label>
+    <input type="text" name = "name" id="name">
+    <br><br>
+    <input type="submit" value="odosli">
+</form>
+</body>
+</html>
