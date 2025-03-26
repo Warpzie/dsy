@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bg">
+        
+            <div id="bg2">
+                <div id="loginCard">
+                    <div id="titleDiv">
+                        <div id="topTitle">
+                            Your logo
+                        </div>
+                        <div id="Login">
+                            Login
+                        </div>
+                    </div>
+                        <form action= "#" method="POST" id="loginForm">
+                            <fieldset>
+                                <label for="Email" class="formLabel">Email</label><br>
+                                <input type = "text" name = "Email" class="input"><br>
+                                <label for="Password" class="formLabel">Password</label><br>
+                                <input type = "text" name = "Password" class="input"><br>
+                                <a href="" id="Fp">Forgot Password?</a><br>
+                                <input type = "signIn" value="Sign In" class="btn">
+                            </fieldset>
+                        </form>
+                    <div id="or">
+                            Or Continue With
+                    </div>
+                    <div id="options">
+                            <div class="optionItem">
+                               
+                            </div>
+                            <div class="optionItem">
+                                <img src="github.png" alt="github">
+                            </div>
+                            <div class="optionItem">
+                                <img src="fb.png" alt="facebook">
+                            </div>
+                    </div>
+                    <div id="register">
+                            <div id="registerText">
+                                Don’t have an account yet?
+                            </div>
+                            <div id="registerLink">
+                                Register for free
+                            </div>
+                    </div>
+                </div>
+                <img src="bgImg2.png" alt="bg" id="bgImg2">
+            </div>
+        
+    </div>
+</body>
+</html>
+
+
+
+
+#bg{
+    background-color: #FFD1B0;
+    background-image:url(bgImg.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-size:50%;
+    background-position: left bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-family: Roboto;
+
+}
+#bg2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1366px;
+    height: 768px;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #fedcc500 0%, #FEDDC6 100%);
+}
+#loginCard{
+    width: 455px;
+    height: 600px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(10.671875px);
+    filter: drop-shadow(0px 2.846px 49.802px rgba(0, 0, 0, 0.10));
+    display: flex;
+    flex-direction: column;
+
+
+}
+#titleDiv{
+    padding-top: 48px;
+    padding-left: 60px;
+}
+#topTitle{
+    color: #F25019;
+    font-size: 18px;
+    font-weight: 400;
+}
+#Login{
+    color: #333;
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 600;
+}
+fieldset{
+    border: none;
+    padding-left: 55px;
+}
+.formLabel{
+    font-size: 13px;
+}
+.input{
+    display: flex;
+    height: 20px;
+    align-items: center;
+    border-radius: 4px;
+    border:none;
+}
